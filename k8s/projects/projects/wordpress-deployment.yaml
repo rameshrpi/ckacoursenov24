@@ -15,10 +15,10 @@ spec:
       containers:
       - name: wordpress
         image: wordpress:latest
-      env:
-      - name: WORDPRESS_DB_HOST
-        value: mysql-service
-      - name: WORDPRESS_DB_USER
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: mysql-service
+        - name: WORDPRESS_DB_USER
         valueFrom:
           secretKeyRef: 
             name: mysql-secret 
