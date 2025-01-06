@@ -14,19 +14,20 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:latest
+        image:  wordpress:latest
         env:
         - name: WORDPRESS_DB_HOST
           value: mysql-service
         - name: WORDPRESS_DB_USER
-        valueFrom:
-          secretKeyRef: 
-            name: mysql-secret 
-            key: mysql-database
-          volumeMounts: 
-          - mountPath: /var/www/html 
-          name: wordpress-storage 
-      volumes: 
-      - name: wordpress-storage 
-        persistentVolumeClaim: 
+          valueFrom:
+            secretKeyRef: 
+              name: mysql-secret 
+              key: mysql-database
+        volumeMounts:
+        - name: wordpress-storage
+          mountPath: /var/www/html
+          readOnly: true
+      volumes:
+      - name: wordpress-storage
+        persistentVolumeClaim:
           claimName: wordpress-pvc
