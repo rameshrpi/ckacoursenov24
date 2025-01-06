@@ -23,10 +23,10 @@ spec:
           secretKeyRef: 
             name: mysql-secret 
             key: mysql-database
-      volumeMounts: 
-      - mountPath: /var/www/html 
-        name: wordpress-storage 
+          volumeMounts: 
+          - mountPath: /var/www/html 
+          name: wordpress-storage 
       volumes: 
       - name: wordpress-storage 
-      persistentVolumeClaim: 
-        claimName: wordpress-pvc
+        persistentVolumeClaim: 
+          claimName: wordpress-pvc
