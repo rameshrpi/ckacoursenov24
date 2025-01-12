@@ -7,6 +7,7 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
+  storageClassName: wordpress-storeage
   nfs:
     path: /mnt/nfs_share
     server: 172.31.29.34
@@ -16,6 +17,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpress-pvc
 spec:
+  storageClassName: wordpress-storeage
   accessModes:
     - ReadWriteOnce
   resources:
