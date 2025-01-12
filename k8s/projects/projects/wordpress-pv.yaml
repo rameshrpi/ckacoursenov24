@@ -8,7 +8,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   nfs:
-    path: /path/to/wordpress
+    path: /mnt/nfs_share
     server: 172.31.29.34
 ---
 apiVersion: v1
