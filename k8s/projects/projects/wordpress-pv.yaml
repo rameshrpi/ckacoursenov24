@@ -10,7 +10,7 @@ spec:
   storageClassName: wordpress-storage
   nfs:
     path: /mnt/nfs_share
-    server: 172.31.29.34
+    server: 172.31.20.188
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
