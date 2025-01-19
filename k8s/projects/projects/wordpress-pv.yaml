@@ -9,7 +9,7 @@ spec:
     - ReadWriteOnce
   storageClassName: wordpress-storage
   nfs:
-    path: /mnt/nfs_share
+    path: /mnt/nfs_mount
     server: 172.31.20.188
 ---
 apiVersion: v1
