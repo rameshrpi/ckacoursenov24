@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: wordpress-pv2
   labels:
-  app: wordpress
+    app: wordpress
 spec:
   capacity:
     storage: 2Gi
@@ -19,7 +19,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: wordpress-pvc2
   labels:
-  app: wordpress
+    app: wordpress
 spec:
   storageClassName: wordpress-storage
   accessModes:
